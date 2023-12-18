@@ -46,7 +46,7 @@ class IngredientType extends AbstractType
                     new Assert\LessThan(200)
                 ]
             ])
-            ->add('sbmit', SubmitType::class, [
+            ->add('submit', SubmitType::class, [
                 'attr' => [
                     'class' => 'btn btn-primary mt-4'
                 ],

@@ -9,7 +9,6 @@
 
             <a href="{{ path('ingredient.new') }}" class="btn btn-primary mt-4">Ajouter un ingrédient</a>
 
-            {# read and display just one flash message type #}
             {% for message in app.flashes('success') %}
                 <div class="alert alert-success mt-4">
                     {{ message }}

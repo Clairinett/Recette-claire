@@ -31,7 +31,7 @@ class IngredientController extends AbstractController
         ]);
     }
 
-    #[Route('/nouveau', name: 'ingredient.new', methods: ['GET', 'POST'])]
+    #[Route('/ingredient/nouveau', name: 'ingredient.new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $manager) : Response
     {
         $ingredient = new Ingredient();
@@ -57,7 +57,7 @@ class IngredientController extends AbstractController
         ]);
     }
 
-    #[Route('/edition/{id}', name: 'ingredient.edit', methods: ['GET', 'POST'])]
+    #[Route('/ingredient/edition/{id}', name: 'ingredient.edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, EntityManagerInterface $manager,/*IngredientRepository $repository, int $id,*/ Ingredient $ingredient /*avec l'ingrédient on recherche directement l'ingredient auquel est affilié l'id*/) : Response
     {
         // $ingredient = $repository->findOneBy(['id' => $id]); autre méthode pour chercher l'ingrédient en retrouvant l'id
@@ -82,7 +82,7 @@ class IngredientController extends AbstractController
         ]);
     }
 
-    #[Route('/suppression/{id}', name: 'ingredient.delete', methods: ['GET'])]
+    #[Route('/ingredient/suppression/{id}', name: 'ingredient.delete', methods: ['GET'])]
     public function delete(EntityManagerInterface $manager, Ingredient $ingredient) : Response
     {
         $manager->remove($ingredient);

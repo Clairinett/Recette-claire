@@ -1,5 +1,7 @@
 {% extends "base.html.twig" %}
 
+{% block title %}RecetteClaire | Nouveau ingrédient{% endblock %}
+
 {% block body %}
     <div class="container mt-3">
 
@@ -23,9 +25,9 @@
             </div>
         </div>
 
-        {# <div class="form-group"> ne fonctionne pas
+        <div class="form-group">
             {{ form_row(form.submit) }}
-        </div> #}
+        </div>
         
         {{ form_end(form) }}
     </div>
