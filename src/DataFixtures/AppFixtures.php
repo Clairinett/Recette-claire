@@ -3,6 +3,7 @@
 namespace App\DataFixtures;
 
 use Faker\Factory;
+use App\Entity\User;
 use Faker\Generator;
 use App\Entity\Recette;
 use App\Entity\Ingredient;
@@ -11,7 +12,6 @@ use Doctrine\Bundle\FixturesBundle\Fixture;
 
 class AppFixtures extends Fixture
 {
-    //
     private Generator $faker;
 
         public function __construct()
@@ -51,6 +51,18 @@ class AppFixtures extends Fixture
             }
 
             $manager->persist($recette);
+        }
+
+        // User
+        for ($u = 0; $u < 10; $u++) {
+            $user = new User();
+            $user->setFullName($this->faker->name())
+                ->setPseudo(mt_rand(0, 1) === 1 ? $this->faker->firstName() : null)
+                ->setEmail($this->faker->email())
+                ->setRoles(['ROLE_USER'])
+                ->setPlainPassword('password');
+
+            $manager->persist($user);
         }
         
         $manager->flush();
