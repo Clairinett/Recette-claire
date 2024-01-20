@@ -5,28 +5,29 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarColor01">
-        <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-                <a class="nav-link active" href="{{ path('home.index') }}">Accueil</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Recette</a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="{{ path('recipe.index') }}">Voir tout</a>
-                    <a class="dropdown-item" href="{{ path('recipe.new') }}">Ajouter</a>
-                </div>
-            </li> 
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ingredient</a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="{{ path('ingredient.index') }}">Voir tout</a>
-                    <a class="dropdown-item" href="{{ path('ingredient.new') }}">Ajouter</a>
-                    {#<a class="dropdown-item" href="{{ path('ingredient.edit')}}">Modifier</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Separated link</a> #}
-                </div>
-            </li>
-        </ul>
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="{{ path('home.index') }}">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Recette</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{{ path('recipe.index') }}">Voir tout</a>
+                        <a class="dropdown-item" href="{{ path('recipe.new') }}">Ajouter</a>
+                    </div>
+                </li> 
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ingredient</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{{ path('ingredient.index') }}">Voir tout</a>
+                        <a class="dropdown-item" href="{{ path('ingredient.new') }}">Ajouter</a>
+                        {#<a class="dropdown-item" href="{{ path('ingredient.edit')}}">Modifier</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Separated link</a> #}
+                    </div>
+                </li>
+            </ul>
+            <a class="navbar-brand" href="{{ path('security.login') }}">Connexion</a>
         </div>
     </div>
 </nav>
